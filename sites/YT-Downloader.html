@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>YouTube Downloader Projekt</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+    <div id="navbar-container"></div>
+
+    <!-- Projekt Detail -->
+    <section id="projekt-detail">
+        <div class="container">
+
+        <!-- Header -->
+        <div class="project-header">
+            <a href="../index.html#projects" class="back-arrow-icon" title="Zurück zur Projektübersicht">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <img src="../bilder/yt-downloader.png" alt="Projekt Bild" class="title-img" />
+            <h1 class="project-title">YouTube Video Downloader</h1>
+        </div>
+
+        <!-- Video -->
+        <video class="detail-video" controls>
+            <source src="../videos/yt-downloader-vid.mp4" type="video/mp4" />
+            Dein Browser unterstützt dieses Videoformat nicht.
+        </video>
+
+
+        <!-- Beschreibung -->
+        <div class="project-info">
+            <h2>Was macht dieses Projekt?</h2>
+            <p>
+                Der YouTube Downloader ist ein Python-Tool mit grafischer Oberfläche, 
+                mit dem man ganz einfach YouTube-Videos herunterladen kann – entweder 
+                als Video oder nur als Audio-Datei (MP3).
+            </p>
+            <p>
+                Gib einfach einen YouTube-Link ein, wähle das gewünschte Format (MP4 oder MP3) 
+                und klicke auf <strong>Download</strong>. Die Datei wird automatisch gespeichert.
+            </p>
+            <p>
+                Ideal für Nutzer, die regelmäßig Inhalte offline speichern möchten – z.B. für Reisen, 
+                Musik-Playlisten oder Tutorials.
+            </p>
+        </div>
+
+        <!-- Animation oder Simulation -->
+        <section id="animation" class="container" style="margin-bottom: 50px;">
+            <h2 style="color:#00c36e; text-align: center; margin-bottom: 30px;">⬇️ So funktioniert der Download</h2>
+            <div class="sortier-layout">
+
+                <!-- Simulierter Downloader -->
+                <div class="unsorted-section"> 
+                    <h3>Link eingeben</h3>
+                    <div class="folder-box unsorted" id="yt-downloader-box">
+                        <input type="text" placeholder="YouTube-Link hier einfügen" class="yt-input" />
+                        <select class="yt-format">
+                            <option value="mp4">MP4 (Video)</option>
+                            <option value="mp3">MP3 (Audio)</option>
+                        </select>
+                        <button class="sort-button" onclick="simulateDownload()">Download</button>
+                    </div>
+                </div>
+
+                <!-- Ergebnis-Anzeige -->
+                <div class="sorted-section">
+                    <h3>Downloadstatus</h3>
+                    <div class="folder-box" id="yt-download-status">
+                        <p id="status-message">Warte auf Eingabe...</p>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <script>
+            function simulateDownload() {
+                const statusMsg = document.getElementById('status-message');
+                statusMsg.textContent = "⏳ Download läuft...";
+                setTimeout(() => {
+                    statusMsg.textContent = "✅ Download abgeschlossen!";
+                }, 2000);
+            }
+        </script>
+        <script>
+            // Navbar laden
+            fetch('navbar.html')
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('navbar-container').innerHTML = data;
+                });
+        </script>
+
+        <!-- Hinweis zur Demo -->
+        <p style="text-align: center; max-width: 700px; margin: 30px auto; font-size: 1.1rem; color: #555;">
+            <strong>Hinweis:</strong> Diese Animation ist nur eine visuelle Demo und keine echte Anwendung. 
+            Sie dient lediglich dazu, zu zeigen, wie das fertige Programm später aussehen und funktionieren könnte. 
+            Die voll funktionsfähige Anwendung ist auf GitHub verfügbar und dort installierbar.
+        </p>
+
+
+        <!-- GitHub Link -->
+        <div style="text-align: center;">
+            <a href="https://github.com/Mohamad-Alshora/Youtube-Videos-Downloader" class="github-link" target="_blank">
+                <i class="fab fa-github"></i> Auf GitHub ansehen
+            </a>
+        </div>
+        </div>
+</body>
+</html>

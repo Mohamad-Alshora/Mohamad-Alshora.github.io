@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Tik-Tak-Toe Projekt</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    
+    <section id="projekt-detail">
+        <div class="container">
+            <!-- Titel mit Bild nebendran -->
+            <div class="project-header">
+                <a href="../index.html#projects" class="back-arrow-icon" title="Zurück zur Startseite">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <img src="../bilder/X-O-Game.png" alt="Tik-Tak-Toe Thumbnail" class="title-img">
+                <h1 class="project-title">Tik-Tak-Toe Spiel</h1>
+            </div>
+            
+            <!-- Video -->
+            <video class="detail-video" controls>
+                <source src="../videos/las-tik-tak.mp4" type="video/mp4">
+                Dein Browser unterstützt dieses Videoformat nicht.
+            </video>
+
+            <!-- Beschreibung -->
+            <div class="project-info">
+                <h2>Funktionsweise</h2>
+                <p>
+                    Dieses kleine Konsolen-Spiel wurde in Python umgesetzt und erlaubt zwei Spielern,
+                    abwechselnd auf einem 3x3 Spielfeld Züge zu machen. Es überprüft automatisch den
+                    Gewinner oder ein Unentschieden und gibt am Ende das Ergebnis aus.
+                </p>
+
+                <h2>Technischer Hintergrund</h2>
+                <p>
+                    Es werden einfache Listen und Kontrollstrukturen in Python verwendet.
+                    Das Projekt ist ideal zum Einstieg in die Programmierlogik und eignet sich
+                    perfekt als Lernübung.
+                </p>
+
+                <!-- GitHub-Link -->
+                <div style="text-align: center;">
+                    <a href="https://github.com/Mohamad-Alshora/Tic-Tac-Teo-With-Python" class="github-link" target="_blank">
+                        <i class="fab fa-github"></i> Auf GitHub ansehen
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        // Navbar laden
+        fetch('navbar.html')
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

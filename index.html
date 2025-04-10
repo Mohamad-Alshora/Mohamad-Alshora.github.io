@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio von Mohamad Alshora – kreative Python-Projekte.">
+    <title>Mein Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header mit Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#home" class="logo">Mohamad Alshora</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Start</a></li>
+                    <li><a href="#about-me">Über mich</a></li>
+                    <li><a href="#projects">Projekte</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Home Section -->
+        <section id="home">
+            <div class="container home-content">
+                <div class="text-content fade-in">
+                    <h1><span class="highlight">Hallo!</span> Ich bin <span class="green-text">Mohamad</span></h1>
+                    <p>Ich entwickle und programmiere gern kreative Projekte.</p>
+                    <div class="buttons">
+                        <a href="#projects" class="btn primary">Projekte ansehen</a>
+                        <a href="#contact" class="btn secondary">Kontakt aufnehmen</a>
+                    </div>
+                </div>
+                <div class="image-container fade-in">
+                    <div class="shadow-box"></div> 
+                    <div class="background-box"></div>
+                    <img src="bilder/bild.png" alt="Profilbild" class="profile-overlap">
+                </div>                       
+            </div>
+        </section>
+
+        <!-- Über Mich Section -->
+        <section id="about-me">
+            <div class="container">
+                <h2>Über mich</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>Ich bin <strong>Mohamad Alshora</strong>, ein angehender <span class="green-text">Elektroniker für Geräte und Systeme</span> im 3. Lehrjahr. Schon vor meiner Ausbildung hat mich die Welt der Technik begeistert – besonders die Verbindung zwischen <strong>Elektronik</strong> und <strong>Programmierung</strong>.</p>
+                        <p>In meiner Freizeit habe ich mit <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong> und <strong>JavaScript</strong> gearbeitet, Kurse auf Udemy besucht und eigene Tools entwickelt. Besonders fasziniert mich die <span class="green-text">Automatisierung</span> – Dinge einfacher und smarter zu machen!</p>
+                        <p>Ich liebe es, Prozesse zu optimieren, mit Code kreative Lösungen zu entwickeln.</p>
+                        <p>Mein Ziel: Technik sinnvoll einsetzen, um unsere Welt ein Stück besser zu machen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projekte Section -->
+        <section id="projects">
+            <div class="container">
+                <h2>Meine Projekte</h2>
+                <div class="projects-grid">
+                    <!-- Projekt 1 -->
+                    <div class="project-box">
+                        <a href="sites/Tik-Tak-Toe.html">
+                            <div class="project-image">
+                                <img src="bilder/X-O-Game.png" alt="Projektbild 1">
+                                <img src="bilder/Tik-Tak-toe.gif" alt="Projektvorschau 1" class="gif-preview">
+                            </div>
+                            <h3>Tik-Tak-Toe-Game</h3>
+                            <p>Ein einfaches Tic-Tac-Toe-Spiel in Python für zwei Spieler, das im Terminal gespielt wird.</p>
+                        </a>
+                    </div>
+        
+                    <!-- Projekt 2 -->
+                    <div class="project-box">
+                        <a href="sites/Dateisotierer.html">
+                            <div class="project-image">
+                                <img src="bilder/Automatische-Dateisortierer.png" alt="Projektbild 2">
+                                <img src="bilder/Dateisortierer.gif" alt="Projektvorschau 2" class="gif-preview">
+                            </div>
+                            <h3>Automatischer-Dateisortierer</h3>
+                            <p>Ein automatischer Dateisortierer in Python, der Dateien basierend auf ihrem Typ in entsprechende Ordner sortiert.</p>
+                        </a>
+                    </div>
+        
+                    <!-- Projekt 3 -->
+                    <div class="project-box">
+                        <a href="sites/YT-Downloader.html">
+                            <div class="project-image">
+                                <img src="bilder/yt-downloader.png" alt="Projektbild 3">
+                                <img src="bilder/yt-downloader.gif" alt="Projektvorschau 3" class="gif-preview">
+                            </div>
+                            <h3>Youtube-Videos-Downloader</h3>
+                            <p>Ein YouTube-Videodownloader mit benutzerfreundlicher UI, der es ermöglicht, Videos einfach herunterzuladen.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontakt Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Kontaktiere mich</h2>
+                <p>Ich freue mich auf deine Nachricht!</p>
+                <ul>
+                    <li>Email: mohamadalshora19@gmail.com</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mohamad Alshora. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

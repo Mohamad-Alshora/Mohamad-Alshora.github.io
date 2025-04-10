@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dateisortierer Projekt</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+    <!-- Projekt Detail -->
+    <section id="projekt-detail">
+        <div class="container">
+
+        <!-- Header -->
+        <div class="project-header">
+            <a href="../index.html#projects" class="back-arrow-icon" title="Zurück zur Projektübersicht">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <img src="../bilder/Automatische-Dateisortierer.png" alt="Projekt Bild" class="title-img" />
+            <h1 class="project-title">Automatischer Dateisortierer</h1>
+        </div>
+
+        <!-- Video -->
+        <video class="detail-video" controls>
+            <source src="../videos/Dateisorter-video.mp4" type="video/mp4" />
+            Dein Browser unterstützt dieses Videoformat nicht.
+        </video>
+
+        <!-- Beschreibung -->
+        <div class="project-info">
+            <h2>Was macht dieses Projekt?</h2>
+            <p>
+                Der automatische Dateisortierer ist ein kleines, praktisches Python-Skript, 
+                das deinen Download- oder Desktop-Ordner analysiert und Dateien basierend 
+                auf ihrer Endung automatisch in vordefinierte Ordner wie <strong>Bilder</strong>, 
+                <strong>Dokumente</strong> oder <strong>Archive</strong> verschiebt.
+            </p>
+            <p>
+                Es erkennt Dateitypen wie <code>.jpg, .png, .pdf, .zip</code> und sortiert sie mit nur einem Klick.
+                Die Datei-Erweiterungen und Zielordner sind flexibel anpassbar – perfekt für den Alltag.
+            </p>
+
+            <p>
+                Ein Beispielanwendungsfall wäre die tägliche Bereinigung des Download-Ordners, 
+                z.B. mit einem geplanten Task oder einfach manuell per Doppelklick.
+            </p>
+        </div>
+        
+        <section id="animation" class="container" style="margin-bottom: 50px;">
+            <h2 style="color:#00c36e; text-align: center; margin-bottom: 30px;">📁 So funktioniert die Sortierung</h2>
+            <div class="sortier-layout">
+
+                <!-- Unsortierter Bereich -->
+                <div class="unsorted-section"> 
+                    <h3>Unsortierte Dateien</h3>
+                    <div class="folder-box unsorted" id="unsorted-folder">
+                        <div class="file" data-type="music">🎵 Lied.mp3</div>
+                        <div class="file" data-type="document">📄 Bericht.pdf</div>
+                        <div class="file" data-type="video">🎬 Film.mp4</div>
+                        <div class="file" data-type="document">📄 Readme.txt</div>
+                    </div>
+                    <button id="sort-button" class="sort-button">Run Code</button>
+                </div>
+                
+                <!-- Sortierte Ordner -->
+                <div class="sorted-section">
+                    <h3>Sortierte Dateien</h3>
+                    <div class="folder-box" id="music-folder"><h4>📁 Musik</h4></div>
+                    <div class="folder-box" id="document-folder"><h4>📁 Dokumente</h4></div>
+                    <div class="folder-box" id="video-folder"><h4>📁 Videos</h4></div>
+                    <div class="folder-box" id="other-folder"><h4>📁 Anderes</h4></div>
+                </div>
+                
+            </div>
+        </section>
+        
+        
+            <script>
+                document.getElementById('sort-button').addEventListener('click', () => {
+                    const unsortedFolder = document.getElementById('unsorted-folder');
+                    const files = unsortedFolder.querySelectorAll('.file');
+                    files.forEach(file => {
+                        const type = file.dataset.type;
+                        let targetFolder;
+                    switch (type) {
+                        case 'music':
+                            targetFolder = document.getElementById('music-folder');
+                            break;
+                        case 'document':
+                            targetFolder = document.getElementById('document-folder');
+                            break;
+                        case 'video':
+                            targetFolder = document.getElementById('video-folder');
+                            break;
+                        default:
+                            targetFolder = document.getElementById('document-folder');
+                            break;
+                        } 
+                        
+                        targetFolder.appendChild(file);
+                    });
+                });
+            </script>
+            <script>
+                // Navbar laden
+                fetch('navbar.html')
+                    .then(res => res.text())
+                    .then(data => {
+                        document.getElementById('navbar-container').innerHTML = data;
+                    });
+            </script>
+        
+        <!-- GitHub Link -->
+        <div style="text-align: center;">
+            <a href="https://github.com/Mohamad-Alshora/Automatischer-Dateisortierer" class="github-link" target="_blank">
+                <i class="fab fa-github"></i> Auf GitHub ansehen
+            </a>
+        </div>
+        </div>
+</body>
+</html>
