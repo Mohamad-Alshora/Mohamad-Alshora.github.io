@@ -12,7 +12,7 @@ RewriteRule ^(.*)$ $1.html [NC,L]
 # Handle 404 errors for sites directory
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^sites/(.*)$ /404.html [L]
+RewriteRule ^sites/(.*)$ /sites/404.html [L]
 
 # Redirect to HTTPS (uncomment if you have SSL)
 # RewriteCond %{HTTPS} off

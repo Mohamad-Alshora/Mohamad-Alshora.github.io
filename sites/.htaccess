@@ -1,5 +1,5 @@
-# Redirect 404 errors to main 404 page
-ErrorDocument 404 /404.html
+# Redirect 404 errors to sites 404 page
+ErrorDocument 404 /sites/404.html
 
 # Enable rewriting
 RewriteEngine On
@@ -12,4 +12,4 @@ RewriteRule ^(.*)$ $1.html [NC,L]
 # Handle 404 errors for non-existent pages
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /404.html [L] 
+RewriteRule ^(.*)$ /sites/404.html [L] 
