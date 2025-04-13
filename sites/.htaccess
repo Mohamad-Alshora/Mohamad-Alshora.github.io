@@ -1,0 +1,15 @@
+# Redirect 404 errors to main 404 page
+ErrorDocument 404 /404.html
+
+# Enable rewriting
+RewriteEngine On
+
+# Remove .html extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+# Handle 404 errors for non-existent pages
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /404.html [L] 
