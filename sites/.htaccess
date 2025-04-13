@@ -1,5 +1,5 @@
 # Redirect 404 errors to sites 404 page
-ErrorDocument 404 /sites/404.html
+ErrorDocument 404 ../404.html
 
 # Enable rewriting
 RewriteEngine On
