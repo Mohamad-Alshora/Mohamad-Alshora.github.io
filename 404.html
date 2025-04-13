@@ -201,7 +201,7 @@
                 currentPath = currentPath.split('/').filter(segment => segment !== 'sites' && segment !== '');
                 
                 // Redirect to index.html at the root level
-                window.location.href = '/' + (currentPath.length > 0 ? currentPath[0] + '/' : '') ;
+                window.location.href = '/' + (currentPath.length > 0 ? currentPath[0] : '');
             });
         });
     </script>
