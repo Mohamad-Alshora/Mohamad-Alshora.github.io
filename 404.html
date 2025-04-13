@@ -194,15 +194,11 @@
             homeButton.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                // Get current URL and clean it up
-                let currentPath = window.location.pathname;
+                // Get the current hostname (e.g., mohamad-alshora.github.io)
+                const hostname = window.location.hostname;
                 
-                // Remove any folder paths (like /sites/) and index.html
-                currentPath = currentPath.split('/')
-                    .filter(segment => segment !== 'sites' && segment !== '' && segment !== 'index.html');
-                
-                // Redirect to index.html at the root level
-                window.location.href = '/' + (currentPath.length > 0 ? currentPath[0] + '/' : '') + 'index.html';
+                // Redirect to the root domain with 404.html
+                window.location.href = `https://${hostname}/404.html`;
             });
         });
     </script>
