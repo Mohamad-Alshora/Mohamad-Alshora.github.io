@@ -753,6 +753,10 @@ footer {
     padding-top: 60px;
 }
 
+#about-me .container h2{
+    padding-bottom: 20px;
+} 
+
 @media (max-width: 600px) {
     .about-text {
         text-align: center;
