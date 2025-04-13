@@ -188,6 +188,21 @@
                 shape.style.animation = `moveShape ${Math.random() * 10 + 10}s infinite alternate${Math.random() > 0.5 ? '-reverse' : ''}`;
                 shapesContainer.appendChild(shape);
             }
+
+            // Handle home button click
+            const homeButton = document.querySelector('.home-button');
+            homeButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Get current URL and clean it up
+                let currentPath = window.location.pathname;
+                
+                // Remove any folder paths (like /sites/)
+                currentPath = currentPath.split('/').filter(segment => segment !== 'sites' && segment !== '');
+                
+                // Redirect to index.html at the root level
+                window.location.href = '/' + (currentPath.length > 0 ? currentPath[0] + '/' : '') + 'index.html';
+            });
         });
     </script>
 </body>
