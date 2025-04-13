@@ -733,7 +733,10 @@ footer {
     }
     
     .title-img {
-        width: 100%;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: var(--border-radius-sm);
     }
     
     .project-title {
