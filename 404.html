@@ -197,11 +197,12 @@
                 // Get current URL and clean it up
                 let currentPath = window.location.pathname;
                 
-                // Remove any folder paths (like /sites/)
-                currentPath = currentPath.split('/').filter(segment => segment !== 'sites' && segment !== '');
+                // Remove any folder paths (like /sites/) and index.html
+                currentPath = currentPath.split('/')
+                    .filter(segment => segment !== 'sites' && segment !== '' && segment !== 'index.html');
                 
                 // Redirect to index.html at the root level
-                window.location.href = '/' + (currentPath.length > 0 ? currentPath[0] : '');
+                window.location.href = '/' + (currentPath.length > 0 ? currentPath[0] + '/' : '') + 'index.html';
             });
         });
     </script>
