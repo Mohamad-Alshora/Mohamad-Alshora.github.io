@@ -1,5 +1,5 @@
 # Enable error handling
-ErrorDocument 404 /404.html
+ErrorDocument 404 ../404.html
 
 # Redirect all non-existent files to the main 404 page
 <IfModule mod_rewrite.c>
@@ -10,6 +10,6 @@ ErrorDocument 404 /404.html
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     
-    # Redirect to the main 404 page
-    RewriteRule ^(.*)$ /404.html [L,R=302]
+    # Redirect to the main 404 page (one directory up)
+    RewriteRule ^(.*)$ ../404.html [L,R=302]
 </IfModule> 
