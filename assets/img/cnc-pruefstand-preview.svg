@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 525" role="img" aria-labelledby="title desc">
+  <title id="title">CNC-Prüfstand Vorschau</title>
+  <desc id="desc">Technische Oberfläche mit NC-Befehlen, Statusanzeige und Maschinenkoordinaten.</desc>
+  <rect width="1200" height="525" fill="#20251f"/>
+  <rect x="30" y="30" width="1140" height="465" rx="5" fill="#f3f2ec"/>
+  <rect x="30" y="30" width="1140" height="54" fill="#fffefa"/>
+  <circle cx="59" cy="57" r="6" fill="#3159de"/><text x="78" y="63" fill="#20251f" font-family="monospace" font-size="17">NC / VIRTUAL TEST BENCH</text>
+  <text x="1002" y="63" fill="#656b62" font-family="monospace" font-size="13">SESSION 0082</text>
+  <rect x="54" y="106" width="502" height="355" fill="#20251f"/>
+  <text x="78" y="143" fill="#b9e64b" font-family="monospace" font-size="14">INPUT.GCODE</text>
+  <g font-family="monospace" font-size="15">
+    <text x="78" y="190" fill="#777f73">01</text><text x="118" y="190" fill="#f3f2ec">G21 G90 G17</text>
+    <text x="78" y="228" fill="#777f73">02</text><text x="118" y="228" fill="#f3f2ec">G00 X0 Y0 Z5</text>
+    <text x="78" y="266" fill="#777f73">03</text><text x="118" y="266" fill="#b9e64b">G01 X80 Y20 F120</text>
+    <text x="78" y="304" fill="#777f73">04</text><text x="118" y="304" fill="#f3f2ec">G02 X120 Y60 I0 J40</text>
+    <text x="78" y="342" fill="#777f73">05</text><text x="118" y="342" fill="#f3f2ec">M30</text>
+  </g>
+  <rect x="580" y="106" width="566" height="214" fill="#fffefa" stroke="#d4d7cd"/>
+  <path d="M625 278 690 251 753 268 817 196 879 219 948 157 1017 175 1097 132" fill="none" stroke="#3159de" stroke-width="4"/>
+  <path d="M625 278 690 251 753 268 817 196 879 219 948 157 1017 175 1097 132" fill="none" stroke="#3159de" stroke-width="14" opacity=".1"/>
+  <g fill="#3159de"><circle cx="690" cy="251" r="5"/><circle cx="817" cy="196" r="5"/><circle cx="948" cy="157" r="5"/><circle cx="1097" cy="132" r="5"/></g>
+  <text x="604" y="137" fill="#656b62" font-family="monospace" font-size="13">TOOLPATH SIMULATION / XY</text>
+  <rect x="580" y="340" width="270" height="121" fill="#fffefa" stroke="#d4d7cd"/>
+  <text x="600" y="370" fill="#656b62" font-family="monospace" font-size="12">VALIDATION</text>
+  <text x="600" y="414" fill="#20251f" font-family="sans-serif" font-weight="700" font-size="23">12 / 12 passed</text>
+  <circle cx="815" cy="405" r="17" fill="#b9e64b"/>
+  <rect x="870" y="340" width="276" height="121" fill="#fffefa" stroke="#d4d7cd"/>
+  <text x="890" y="370" fill="#656b62" font-family="monospace" font-size="12">MACHINE STATE</text>
+  <text x="890" y="408" fill="#20251f" font-family="monospace" font-size="14">X 120.00  Y 60.00</text>
+  <text x="890" y="438" fill="#20251f" font-family="monospace" font-size="14">Z 005.00  / READY</text>
+</svg>
