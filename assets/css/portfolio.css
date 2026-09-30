@@ -18,13 +18,27 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; color: var(--text); background: var(--page); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.65; }
+body { margin: 0; color: var(--text); background-color: var(--page); background-image: linear-gradient(rgba(37, 99, 235, .025) 1px, transparent 1px), linear-gradient(90deg, rgba(37, 99, 235, .025) 1px, transparent 1px); background-size: 36px 36px; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.65; }
 a { color: var(--blue); text-decoration: none; text-underline-offset: 3px; }
 a:hover { color: var(--blue-dark); }
 a:focus-visible { outline: 3px solid rgba(37, 99, 235, .4); outline-offset: 3px; border-radius: 4px; }
 .content-width { width: min(var(--content-width), calc(100% - 40px)); margin-inline: auto; }
+section[id] { scroll-margin-top: 82px; }
 .skip-link { position: absolute; top: 8px; left: -10000px; z-index: 5; padding: 8px 12px; color: var(--text); background: var(--surface); }
 .skip-link:focus { left: 8px; }
+
+.site-header { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, .96); }
+.site-nav { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.site-brand { color: var(--text); font-size: .95rem; font-weight: 750; letter-spacing: -.015em; }
+.site-brand:hover { color: var(--blue); }
+.site-nav-links { display: flex; align-items: center; gap: 24px; }
+.site-nav-links a { color: #536174; font-size: .82rem; font-weight: 600; }
+.site-nav-links a:hover { color: var(--blue); }
+.site-nav-links .nav-contact-link { padding: 7px 11px; border: 1px solid #dbeafe; border-radius: 7px; color: var(--blue); background: var(--blue-soft); }
+.site-nav-links .nav-contact-link span { margin-left: 5px; }
+.back-link { display: inline-flex; align-items: center; gap: 9px; padding: 7px 11px; border: 1px solid var(--line); border-radius: 8px; color: #334155; background: var(--surface); font-size: .88rem; font-weight: 600; transition: border-color .18s ease, color .18s ease, background .18s ease; }
+.back-link:hover { border-color: #bfdbfe; color: var(--blue); background: var(--blue-soft); }
+.back-link span { color: var(--blue); }
 
 .profile-header { padding: 66px 0 62px; background: var(--surface); border-bottom: 1px solid var(--line); }
 .eyebrow { margin: 0 0 10px; color: var(--blue); font-size: .78rem; font-weight: 700; }
@@ -68,10 +82,6 @@ a:focus-visible { outline: 3px solid rgba(37, 99, 235, .4); outline-offset: 3px;
 .footer-inner p { margin: 0; color: var(--muted); font-size: .78rem; }
 .copyright { font-family: inherit; }
 
-.detail-topbar { width: min(var(--content-width), calc(100% - 40px)); margin: 0 auto; padding: 29px 0 20px; border-bottom: 1px solid var(--line); }
-.back-link { display: inline-flex; align-items: center; gap: 9px; padding: 7px 11px; border: 1px solid var(--line); border-radius: 8px; color: #334155; background: var(--surface); font-size: .88rem; font-weight: 600; transition: border-color .18s ease, color .18s ease, background .18s ease; }
-.back-link:hover { border-color: #bfdbfe; color: var(--blue); background: var(--blue-soft); }
-.back-link span { color: var(--blue); }
 .detail-main { width: min(var(--content-width), calc(100% - 40px)); min-height: 65vh; margin-inline: auto; padding: 39px 0 72px; }
 .detail-heading { margin-bottom: 28px; }
 .detail-heading .eyebrow { margin-bottom: 13px; }
@@ -143,10 +153,14 @@ a:focus-visible { outline: 3px solid rgba(37, 99, 235, .4); outline-offset: 3px;
 .not-found .github-link { margin-top: 8px; }
 
 @media (max-width: 640px) {
+    .site-nav { min-height: 62px; gap: 8px; }
+    .site-brand { font-size: .85rem; }
+    .site-nav-links { gap: 11px; }
+    .site-nav-links a { font-size: .74rem; }
+    .site-nav-links .nav-contact-link { padding: 6px 8px; }
     .profile-header { padding: 42px 0 40px; }
     .project-grid, .detail-columns { grid-template-columns: 1fr; }
     .project-card { padding: 20px; }
-    .detail-topbar { padding-top: 22px; }
     .detail-main { padding-top: 29px; }
     .detail-demo { aspect-ratio: 4 / 3; }
     .detail-tech { padding: 18px; }

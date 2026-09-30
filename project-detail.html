@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="G-Code- und NC-Befehle prüfen, visualisieren und mit dem CNC-QA-Simulator testen.">
+    <meta name="theme-color" content="#f8fafc">
+    <title>Virtueller CNC-Schnittstellen- &amp; QA-Prüfstand | Mohamad Alshora</title>
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body class="portfolio-page detail-page">
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <header class="site-header">
+        <nav class="site-nav content-width" aria-label="Seitennavigation">
+            <a class="site-brand" href="index.html">Mohamad Alshora</a>
+            <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Zurück zur Übersicht</a>
+        </nav>
+    </header>
+    <main id="main-content" class="page-width detail-main">
+        <article class="detail-content">
+            <header class="detail-heading">
+                <p class="eyebrow">Projekt / cnc-pruefstand</p>
+                <h1>Virtueller CNC-Schnittstellen- &amp; QA-Prüfstand</h1>
+                <p class="detail-summary">Simulation zur Validierung und 2D-Visualisierung von G-Code/NC-Steuerungsbefehlen für Industriemaschinen inklusive automatisierter Qualitätsprüfung (QA).</p>
+                <ul class="tech-list detail-heading-tech" aria-label="Projekttechnologien">
+                    <li>PHP</li>
+                    <li>Python</li>
+                    <li>C++ Logik</li>
+                    <li>G-Code Parsing</li>
+                    <li>JSON</li>
+                    <li>QA-Automatisierung</li>
+                </ul>
+            </header>
+
+            <section class="detail-demo" aria-label="Projektvorschau">
+                <img src="assets/img/cnc-pruefstand-preview.svg" alt="Technische Vorschau des CNC-Prüfstands mit NC-Code, Werkzeugbahn und QA-Status">
+                <span class="preview-caption">Projektvorschau · Demo folgt</span>
+            </section>
+
+            <section class="simulator" aria-labelledby="simulator-title">
+                <div class="simulator-heading">
+                    <div>
+                        <p class="eyebrow">Browser-Testwerkzeug</p>
+                        <h2 id="simulator-title">G-Code Simulator &amp; QA-Checker</h2>
+                    </div>
+                    <p class="simulator-note">Lokal im Browser verarbeitet. Es werden keine Befehle an eine Maschine gesendet.</p>
+                </div>
+
+                <div class="simulator-workspace">
+                    <div class="editor-panel">
+                        <label for="gcode-input">NC-Programm</label>
+                        <textarea id="gcode-input" spellcheck="false" autocapitalize="off" autocomplete="off" aria-describedby="gcode-help">G21
+G00 X20 Y20 Z5
+G01 Z-5 F200
+G01 X180 Y20 F500
+G81 X220 Y20 Z-10 F300</textarea>
+                        <p class="editor-help" id="gcode-help">Unterstützt G00, G01, G81, G82, G80 sowie G20/G21 und G90/G91.</p>
+                        <div class="simulator-actions">
+                            <button class="run-button" id="run-simulation" type="button">▶ Code ausführen &amp; Visualisieren</button>
+                            <button class="reset-button" id="reset-simulation" type="button">↻ Zurücksetzen</button>
+                        </div>
+                    </div>
+                    <div class="canvas-panel">
+                        <div class="canvas-heading">
+                            <h3>Werkstück / XY-Ebene</h3>
+                            <ul class="path-legend" aria-label="Legende">
+                                <li><span class="legend-rapid"></span>Eilgang</li>
+                                <li><span class="legend-feed"></span>Vorschub</li>
+                                <li><span class="legend-drill"></span>Bohrung</li>
+                            </ul>
+                        </div>
+                        <div class="canvas-wrap">
+                            <canvas id="toolpath-canvas" width="900" height="480" role="img" aria-label="2D-Visualisierung der G-Code-Werkzeugbahn"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="qa-panel" aria-labelledby="qa-title">
+                    <div class="qa-heading">
+                        <h3 id="qa-title">QA-Prüfprotokoll</h3>
+                        <span id="qa-status" class="qa-status" role="status" aria-live="polite">Bereit</span>
+                    </div>
+                    <ol id="qa-log" class="qa-log" aria-live="polite">
+                        <li class="log-info">Beispielcode wird geprüft. Du kannst ihn ändern und erneut ausführen.</li>
+                    </ol>
+                </section>
+            </section>
+
+            <div class="detail-columns">
+                <section aria-labelledby="description-title">
+                    <h2 id="description-title">Problem und Lösung</h2>
+                    <p class="detail-description">Dieses Projekt simuliert das Einlesen, Validieren und Visualisieren von NC-Steuerungsbefehlen. Es prüft G-Code-Parameter auf Plausibilität und Sicherheit (z. B. Schwellenwerte und Werkzeugbahnen), generiert eine grafische 2D-Vorschau und führt automatisierte QA-Testläufe zur Schnittstellen-Validierung durch.</p>
+                </section>
+                <aside class="detail-tech" aria-labelledby="tech-title">
+                    <h2 id="tech-title">Technik und Architektur</h2>
+                    <p class="architecture-summary">Parser- und Simulationslogik werden über klar definierte Datenschnittstellen verbunden. Die Prüfungen umfassen Befehlsparameter, Grenzwerte und Werkzeugbahnen.</p>
+                    <ul class="architecture-list">
+                        <li>G-Code Parsing</li>
+                        <li>REST-API</li>
+                        <li>JSON</li>
+                        <li>2D-Werkzeugbahnprüfung</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <footer class="detail-actions">
+                <a class="github-link" href="https://github.com/mohamad-alshora/cnc-pruefstand" target="_blank" rel="noopener noreferrer">Code auf GitHub ansehen <span aria-hidden="true">↗</span></a>
+                <a class="project-link" href="index.html">Zur Projektübersicht <span aria-hidden="true">→</span></a>
+            </footer>
+        </article>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="wordmark footer-mark" href="index.html">MA<span>.</span></a>
+            <p>Elektronik verstehen. Systeme verbinden. Qualität sichern.</p>
+            <p class="copyright">&copy; 2026 Mohamad Alshora</p>
+        </div>
+    </footer>
+    <script src="assets/js/gcode-simulator.js" defer></script>
+</body>
+</html>

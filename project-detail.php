@@ -33,8 +33,11 @@ if ($notFound) {
 </head>
 <body class="portfolio-page detail-page">
     <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-    <header class="detail-topbar">
-        <a class="back-link" href="index.php"><span aria-hidden="true">←</span> Zurück zur Übersicht</a>
+    <header class="site-header">
+        <nav class="site-nav content-width" aria-label="Seitennavigation">
+            <a class="site-brand" href="index.php"><?= escape($profile['name']) ?></a>
+            <a class="back-link" href="index.php"><span aria-hidden="true">←</span> Zurück zur Übersicht</a>
+        </nav>
     </header>
     <main id="main-content" class="page-width detail-main">
         <?php if ($notFound): ?>

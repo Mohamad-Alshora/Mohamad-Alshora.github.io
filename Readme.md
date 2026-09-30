@@ -1,17 +1,21 @@
 # Mohamad Alshora | Portfolio
 
-Persoenliches PHP-Portfolio mit CNC-Schnittstellen-Simulator und QA-Pruefstand.
+Persoenliches Entwicklerportfolio mit CNC-Schnittstellen-Simulator und QA-Pruefstand.
 
-## Projektstruktur
+## GitHub Pages
 
-- `index.php` rendert die Portfolio-Uebersicht.
-- `project-detail.php` rendert die CNC-Projektdetails und den G-Code-Simulator.
+GitHub Pages kann kein PHP ausfuehren. Deshalb sind `index.html` und `project-detail.html` die statischen Hosting-Seiten. Der CNC-Simulator laeuft direkt im Browser mit JavaScript.
+
+## PHP-Version lokal oder auf PHP-Hosting
+
+- `index.php` und `project-detail.php` sind die PHP-Versionen der Portfolio-Seiten.
 - `includes/data.php` enthaelt Profil- und Projektdaten.
 - `includes/footer.php` enthaelt den gemeinsamen Seitenabschluss.
-- `assets/css/portfolio.css` enthaelt die Styles fuer die PHP-Seiten und den Simulator.
+- `assets/css/portfolio.css` enthaelt die Styles fuer die statischen und PHP-Seiten.
+- `assets/js/gcode-simulator.js` stellt den G-Code-Simulator fuer die statische Detailseite bereit.
 - `assets/img/cnc-pruefstand-preview.svg` ist die CNC-Projektvorschau.
 
-## Lokal starten
+Zum lokalen PHP-Test im Projektordner:
 
 PHP 8 oder neuer wird empfohlen. Im Projektordner:
 
@@ -19,5 +23,5 @@ PHP 8 oder neuer wird empfohlen. Im Projektordner:
 php -S localhost:8000
 ```
 
-Danach `http://localhost:8000` im Browser oeffnen. GitHub Pages fuehrt PHP nicht aus; fuer die Live-Seite ist ein PHP-faehiger Webserver erforderlich.
+Danach `http://localhost:8000` im Browser oeffnen. Fuer die PHP-Seiten auf einem Server wird ein PHP-faehiger Webhost benoetigt.
 
