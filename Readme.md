@@ -19,9 +19,3 @@ Zum lokalen PHP-Test im Projektordner:
 
 PHP 8 oder neuer wird empfohlen. Im Projektordner:
 
-```powershell
-php -S localhost:8000
-```
-
-Danach `http://localhost:8000` im Browser oeffnen. Fuer die PHP-Seiten auf einem Server wird ein PHP-faehiger Webhost benoetigt.
-
