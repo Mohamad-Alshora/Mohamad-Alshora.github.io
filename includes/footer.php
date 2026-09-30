@@ -5,6 +5,5 @@
             <p class="copyright">&copy; <?= date('Y') ?> Mohamad Alshora</p>
         </div>
     </footer>
-    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

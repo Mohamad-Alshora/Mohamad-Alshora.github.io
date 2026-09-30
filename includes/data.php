@@ -17,7 +17,7 @@ $projects = [
         'architecture' => ['G-Code Parsing', 'REST-API', 'JSON', '2D-Werkzeugbahnprüfung'],
         'demo_url' => 'https://deine-demo.streamlit.app',
         'github_url' => 'https://github.com/mohamad-alshora/cnc-pruefstand',
-        'image' => 'assets/img/cnc-demo.gif',
+        'image' => 'assets/img/cnc-pruefstand-preview.svg',
     ],
 ];
 
