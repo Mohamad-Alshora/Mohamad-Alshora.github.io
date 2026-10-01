@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Smart Log dashboard preview</title>
+  <desc id="desc">Dark analytics dashboard with machine KPIs, execution-time trend, event status bars, and log rows.</desc>
+  <rect width="1200" height="560" fill="#0c1220"/>
+  <path d="M0 80h1200M0 160h1200M0 240h1200M0 320h1200M0 400h1200M0 480h1200M100 0v560M200 0v560M300 0v560M400 0v560M500 0v560M600 0v560M700 0v560M800 0v560M900 0v560M1000 0v560M1100 0v560" stroke="#60a5fa" stroke-opacity=".045"/>
+  <rect x="30" y="24" width="1140" height="512" rx="12" fill="#101827" stroke="#263449"/>
+  <circle cx="58" cy="53" r="6" fill="#5eead4"/>
+  <text x="76" y="58" fill="#dce6f5" font-family="Arial,sans-serif" font-size="16" font-weight="700">SMART LOG / PERFORMANCE</text>
+  <text x="1008" y="57" fill="#5eead4" font-family="monospace" font-size="11">MACHINE LINE A</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="52" y="82" width="260" height="88" rx="8" fill="#172235" stroke="#263449"/><rect x="52" y="82" width="260" height="3" rx="2" fill="#60a5fa"/>
+    <rect x="328" y="82" width="260" height="88" rx="8" fill="#172235" stroke="#263449"/><rect x="328" y="82" width="260" height="3" rx="2" fill="#5eead4"/>
+    <rect x="604" y="82" width="260" height="88" rx="8" fill="#172235" stroke="#263449"/><rect x="604" y="82" width="260" height="3" rx="2" fill="#fb7185"/>
+    <rect x="880" y="82" width="268" height="88" rx="8" fill="#172235" stroke="#263449"/><rect x="880" y="82" width="268" height="3" rx="2" fill="#a78bfa"/>
+    <g fill="#9aa9bc" font-size="11"><text x="70" y="108">TOTAL RUNTIME</text><text x="346" y="108">EFFICIENCY</text><text x="622" y="108">ERRORS / WARNINGS</text><text x="898" y="108">AVG CYCLE TIME</text></g>
+    <g fill="#f1f5f9" font-size="27" font-weight="700"><text x="70" y="147">28h 16m</text><text x="346" y="147">96.8%</text><text x="622" y="147">4 / 12</text><text x="898" y="147">742 ms</text></g>
+  </g>
+  <rect x="52" y="190" width="700" height="226" rx="8" fill="#111a29" stroke="#263449"/>
+  <text x="72" y="218" fill="#dce6f5" font-family="Arial,sans-serif" font-size="13" font-weight="700">PERFORMANCE &amp; TEMPERATURE</text>
+  <g stroke="#263449" stroke-width="1"><path d="M86 260h636M86 300h636M86 340h636M86 380h636"/><path d="M180 238v156M285 238v156M390 238v156M495 238v156M600 238v156"/></g>
+  <path d="M88 352 146 334 204 341 262 311 320 326 378 286 436 300 494 269 552 292 610 254 668 276 720 245" fill="none" stroke="#60a5fa" stroke-width="3"/>
+  <path d="M88 375 146 369 204 365 262 357 320 352 378 348 436 339 494 344 552 331 610 327 668 319 720 323" fill="none" stroke="#fb923c" stroke-width="2.5"/>
+  <g fill="#9aa9bc" font-family="Arial,sans-serif" font-size="9"><text x="92" y="402">08:00</text><text x="293" y="402">10:00</text><text x="500" y="402">12:00</text><text x="678" y="402">14:00</text><text x="95" y="244">900</text><text x="100" y="384">400</text></g>
+  <circle cx="630" cy="232" r="4" fill="#60a5fa"/><text x="640" y="236" fill="#9aa9bc" font-family="Arial,sans-serif" font-size="9">Cycle ms</text><circle cx="698" cy="232" r="4" fill="#fb923c"/><text x="708" y="236" fill="#9aa9bc" font-family="Arial,sans-serif" font-size="9">Temp</text>
+  <rect x="772" y="190" width="376" height="226" rx="8" fill="#111a29" stroke="#263449"/>
+  <text x="792" y="218" fill="#dce6f5" font-family="Arial,sans-serif" font-size="13" font-weight="700">STATUS DISTRIBUTION</text>
+  <g font-family="Arial,sans-serif" font-size="10" fill="#aab7ca"><text x="794" y="263">INFO</text><text x="794" y="310">WARNING</text><text x="794" y="357">ERROR</text></g>
+  <rect x="858" y="248" width="235" height="18" rx="4" fill="#60a5fa"/><rect x="858" y="295" width="92" height="18" rx="4" fill="#fbbf24"/><rect x="858" y="342" width="36" height="18" rx="4" fill="#fb7185"/>
+  <g font-family="monospace" font-size="10" fill="#dce6f5"><text x="1104" y="262">28</text><text x="961" y="309">11</text><text x="905" y="356">4</text></g>
+  <rect x="52" y="434" width="1096" height="80" rx="8" fill="#111a29" stroke="#263449"/>
+  <text x="72" y="458" fill="#dce6f5" font-family="Arial,sans-serif" font-size="11" font-weight="700">RECENT MACHINE EVENTS</text>
+  <g font-family="monospace" font-size="10"><text x="72" y="484" fill="#9aa9bc">14:02:11</text><text x="170" y="484" fill="#5eead4">INFO</text><text x="235" y="484" fill="#dce6f5">Cycle completed</text><text x="72" y="503" fill="#9aa9bc">14:04:36</text><text x="170" y="503" fill="#fb7185">ERROR</text><text x="235" y="503" fill="#dce6f5">E-DRIVE · execution timeout</text></g>
+  </svg>

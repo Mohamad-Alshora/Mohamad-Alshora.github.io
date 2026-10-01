@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Python Data-Analytics Dashboard zur Auswertung von Maschinen-Logs, Performance und Fehlern.">
+    <meta name="theme-color" content="#f8fafc">
+    <title>Smart Log &amp; CSV Performance Dashboard | Mohamad Alshora</title>
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body class="portfolio-page detail-page">
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <header class="site-header">
+        <nav class="site-nav content-width" aria-label="Seitennavigation">
+            <a class="site-brand" href="index.html">Mohamad Alshora</a>
+            <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Zurück zur Übersicht</a>
+        </nav>
+    </header>
+    <main id="main-content" class="page-width detail-main">
+        <article class="detail-content">
+            <header class="detail-heading">
+                <p class="eyebrow">Projekt / DATA ANALYTICS</p>
+                <h1>Smart Log &amp; CSV Performance Dashboard</h1>
+                <p class="detail-summary">Interactive Data-Analytics App zur Auswertung von Maschinen-Logs, Fehlerquoten und System-Histories.</p>
+                <ul class="tech-list detail-heading-tech" aria-label="Projekttechnologien">
+                    <li>Python</li><li>Streamlit</li><li>Pandas</li><li>Polars</li>
+                    <li>Plotly</li><li>NumPy</li><li>JSON</li><li>Data Analytics</li>
+                </ul>
+            </header>
+
+            <section class="detail-demo" aria-label="Dashboard-Vorschau">
+                <img src="assets/img/log-analyzer-preview.svg" alt="Dunkles Log-Analyse-Dashboard mit Performance-KPIs, Trenddiagramm und Statusverteilung">
+                <span class="preview-caption">Dashboard-Vorschau</span>
+            </section>
+
+            <section id="log-analyzer-tool" class="csv-analyzer" aria-label="CSV- und Logdaten-Analyse"></section>
+            <script src="assets/js/csv-log-analyzer.js" defer></script>
+
+            <div class="detail-columns">
+                <section aria-labelledby="description-title">
+                    <h2 id="description-title">Daten verstehen, bevor Ausfälle entstehen</h2>
+                    <p class="detail-description">Ein praxistaugliches Python-Dashboard, das Rohdaten (CSV/JSON/Logs) von Systemen und Maschinen einliest, mit Pandas/Polars aufbereitet und mit Plotly interaktiv visualisiert. Es erkennt Ausfälle, berechnet Performance-KPIs und bietet Daten-Exportfunktionen.</p>
+                </section>
+                <aside class="detail-tech" aria-labelledby="tech-title">
+                    <h2 id="tech-title">Datenfluss &amp; Architektur</h2>
+                    <p class="architecture-summary">Dateiupload und Demo-Daten laufen durch eine Normalisierung, bevor Filter und Diagramme auf denselben Datensatz zugreifen.</p>
+                    <ul class="architecture-list">
+                        <li>CSV / JSON ingestion</li>
+                        <li>Pandas / Polars processing</li>
+                        <li>Plotly interactive charts</li>
+                        <li>CSV summary export</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <footer class="detail-actions">
+                <a class="project-link" href="index.html">Zur Projektübersicht <span aria-hidden="true">→</span></a>
+            </footer>
+        </article>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="wordmark footer-mark" href="index.html">MA<span>.</span></a>
+            <p>Elektronik verstehen. Systeme verbinden. Qualität sichern.</p>
+            <p class="copyright">&copy; 2026 Mohamad Alshora</p>
+        </div>
+    </footer>
+</body>
+</html>

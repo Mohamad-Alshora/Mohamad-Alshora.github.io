@@ -18,7 +18,7 @@ if ($notFound) {
     $demoIsPlaceholder = str_contains($project['demo_url'], 'deine-demo.streamlit.app');
     $previewImage = is_file(__DIR__ . '/' . $project['image'])
         ? $project['image']
-        : 'assets/img/cnc-pruefstand-preview.svg';
+        : ($projectId === 'log-analyzer' ? 'assets/img/log-analyzer-preview.svg' : 'assets/img/cnc-pruefstand-preview.svg');
 }
 ?>
 <!DOCTYPE html>
@@ -70,6 +70,11 @@ if ($notFound) {
                         <div class="demo-placeholder"><p>Eine Live-Demo oder Projektgrafik kann hier ergänzt werden.</p></div>
                     <?php endif; ?>
                 </section>
+
+                <?php if ($projectId === 'log-analyzer'): ?>
+                    <section id="log-analyzer-tool" class="csv-analyzer" aria-label="CSV- und Logdaten-Analyse"></section>
+                    <script src="assets/js/csv-log-analyzer.js" defer></script>
+                <?php endif; ?>
 
                 <?php if ($projectId === 'cnc-pruefstand'): ?>
                     <section class="simulator" aria-labelledby="simulator-title">
@@ -410,7 +415,7 @@ G81 X220 Y20 Z-10 F300</textarea>
                     </section>
                     <aside class="detail-tech" aria-labelledby="tech-title">
                         <h2 id="tech-title">Technik und Architektur</h2>
-                        <p class="architecture-summary">Parser- und Simulationslogik werden über klar definierte Datenschnittstellen verbunden. Die Prüfungen umfassen Befehlsparameter, Grenzwerte und Werkzeugbahnen.</p>
+                        <p class="architecture-summary"><?= escape($project['architecture_desc']) ?></p>
                         <ul class="architecture-list">
                             <?php foreach ($project['architecture'] as $component): ?>
                                 <li><?= escape($component) ?></li>
@@ -420,7 +425,9 @@ G81 X220 Y20 Z-10 F300</textarea>
                 </div>
 
                 <footer class="detail-actions">
-                    <a class="github-link" href="<?= escape($project['github_url']) ?>" target="_blank" rel="noopener noreferrer">Code auf GitHub ansehen <span aria-hidden="true">↗</span></a>
+                    <?php if ($project['github_url'] !== ''): ?>
+                        <a class="github-link" href="<?= escape($project['github_url']) ?>" target="_blank" rel="noopener noreferrer">Code auf GitHub ansehen <span aria-hidden="true">↗</span></a>
+                    <?php endif; ?>
                     <a class="project-link" href="index.php">Zur Projektübersicht <span aria-hidden="true">→</span></a>
                 </footer>
             </article>
