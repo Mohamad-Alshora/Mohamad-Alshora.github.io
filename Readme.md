@@ -81,7 +81,3 @@ Du kannst alle Projekte direkt im Browser ausprobieren:
 - **Entwickler:** Mohamad Alshora
 - **E-Mail:** [mohamadalshora19@gmail.com](mailto:mohamadalshora19@gmail.com)
 - **GitHub:** [Mohamad-Alshora](https://github.com/Mohamad-Alshora)
-
----
-
-*Zuletzt aktualisiert: 2026-10-04*
