@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^php -l includes\\\\data\\.php; if \\(\\$\\?\\) \\{ php -l project-detail\\.php \\}$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

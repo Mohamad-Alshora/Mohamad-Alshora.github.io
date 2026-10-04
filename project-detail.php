@@ -60,7 +60,7 @@ if ($notFound) {
                     </ul>
                 </header>
 
-                <section class="detail-demo" aria-label="Live-Demo und Projektvorschau">
+                <section class="detail-demo<?= $projectId === 'iot-protocol-simulator' ? ' detail-demo--simulator' : '' ?>" aria-label="Live-Demo und Projektvorschau">
                     <?php if ($project['demo_url'] !== '' && !$demoIsPlaceholder): ?>
                         <iframe src="<?= escape($project['demo_url']) ?>" title="Live-Demo: <?= escape($project['title']) ?>" loading="lazy" sandbox="allow-scripts allow-same-origin allow-forms" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     <?php elseif ($previewImage !== ''): ?>
@@ -408,20 +408,22 @@ G81 X220 Y20 Z-10 F300</textarea>
                     </script>
                 <?php endif; ?>
 
-                <div class="detail-columns">
+                <div class="detail-columns<?= isset($project['architecture_desc'], $project['architecture']) ? '' : ' detail-columns--single' ?>">
                     <section aria-labelledby="description-title">
                         <h2 id="description-title">Problem und Lösung</h2>
                         <p class="detail-description"><?= escape($project['full_desc']) ?></p>
                     </section>
-                    <aside class="detail-tech" aria-labelledby="tech-title">
-                        <h2 id="tech-title">Technik und Architektur</h2>
-                        <p class="architecture-summary"><?= escape($project['architecture_desc']) ?></p>
-                        <ul class="architecture-list">
-                            <?php foreach ($project['architecture'] as $component): ?>
-                                <li><?= escape($component) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </aside>
+                    <?php if (isset($project['architecture_desc'], $project['architecture'])): ?>
+                        <aside class="detail-tech" aria-labelledby="tech-title">
+                            <h2 id="tech-title">Technik und Architektur</h2>
+                            <p class="architecture-summary"><?= escape($project['architecture_desc']) ?></p>
+                            <ul class="architecture-list">
+                                <?php foreach ($project['architecture'] as $component): ?>
+                                    <li><?= escape($component) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </aside>
+                    <?php endif; ?>
                 </div>
 
                 <footer class="detail-actions">

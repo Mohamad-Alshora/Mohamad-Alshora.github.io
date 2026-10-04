@@ -31,6 +31,15 @@ $projects = [
         'github_url' => '',
         'image' => 'assets/img/log-demo.gif',
     ],
+    'iot-protocol-simulator' => [
+        'title' => 'Interactive IoT & REST-API Protocol Simulator (QA Bench Demo)',
+        'short_desc' => 'Browserbasierter Protocol-Simulator zur Visualisierung von REST-API / JSON-Datenpaketen und automatisierten Plausibilitätsprüfungen für IoT-Sensordaten.',
+        'full_desc' => 'Ein interaktiver Prüfstand zur Analyse von IoT-Kommunikationsprotokollen. Die Anwendung simuliert das Senden von Telemetriedaten (z. B. Temperatur, Luftfeuchtigkeit, System- und Batteriestatus) via REST-API als JSON-Payload an ein virtuelles Gateway. Im Hintergrund führt eine QA-Engine automatisierte Plausibilitäts- und Grenzwertprüfungen durch (z. B. Abfangen von Schwellenwert-Überschreitungen, Sensorfehlern und ungültigen Payloads).',
+        'tech' => ['JavaScript (ES6+)', 'REST-API', 'JSON Parsing', 'IoT Telemetry', 'QA Edge-Case Validation', 'PHP'],
+        'demo_url' => 'assets/demos/iot-simulator.html',
+        'github_url' => 'https://github.com/mohamad-alshora/iot-protocol-simulator',
+        'image' => 'assets/img/iot-simulator-preview.gif',
+    ],
 ];
 
 function escape(string $value): string
