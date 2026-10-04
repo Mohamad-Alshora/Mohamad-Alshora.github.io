@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IoT- und REST-API-Protokolle simulieren, Telemetrie visualisieren und Sensordaten mit QA-Prüfungen validieren.">
+    <meta name="theme-color" content="#f8fafc">
+    <title>Interactive IoT &amp; REST-API Protocol Simulator | Mohamad Alshora</title>
+    <link rel="stylesheet" href="assets/css/portfolio.css">
+</head>
+<body class="portfolio-page detail-page">
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <header class="site-header">
+        <nav class="site-nav content-width" aria-label="Seitennavigation">
+            <a class="site-brand" href="index.html">Mohamad Alshora</a>
+            <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Zurück zur Übersicht</a>
+        </nav>
+    </header>
+    <main id="main-content" class="page-width detail-main">
+        <article class="detail-content">
+            <header class="detail-heading">
+                <p class="eyebrow">Projekt / IoT &amp; QA</p>
+                <h1>Interactive IoT &amp; REST-API Protocol Simulator (QA Bench Demo)</h1>
+                <p class="detail-summary">Browserbasierter Simulator zur Visualisierung von REST-API- und JSON-Datenpaketen sowie automatisierten Plausibilitätsprüfungen für IoT-Sensordaten.</p>
+                <ul class="tech-list detail-heading-tech" aria-label="Projekttechnologien">
+                    <li>JavaScript (ES6+)</li>
+                    <li>REST-API</li>
+                    <li>JSON Parsing</li>
+                    <li>IoT Telemetry</li>
+                    <li>QA Edge-Case Validation</li>
+                    <li>PHP</li>
+                </ul>
+            </header>
+
+            <section class="detail-demo" aria-label="Vorschau eines industriellen IoT-Telemetrie-Dashboards">
+                <img src="assets/img/iot-simulator-preview.svg" alt="Industrielles IoT-Dashboard mit Telemetrie-Kennzahlen, Sensorstatus, Temperaturverlauf und QA-Prüfergebnis">
+                <span class="preview-caption">IoT Gateway / Telemetrie-Monitoring</span>
+            </section>
+
+            <section class="detail-demo detail-demo--simulator" aria-label="Interaktive IoT-Protokoll-Simulation">
+                <iframe src="assets/demos/iot-simulator.html" title="Interaktive IoT- und REST-API-Simulation" loading="lazy" sandbox="allow-scripts" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </section>
+
+            <div class="detail-columns">
+                <section aria-labelledby="description-title">
+                    <h2 id="description-title">Problem und Lösung</h2>
+                    <p class="detail-description">Ein interaktiver Prüfstand zur Analyse von IoT-Kommunikationsprotokollen. Die Anwendung simuliert das Senden von Telemetriedaten (z. B. Temperatur, Luftfeuchtigkeit, System- und Batteriestatus) via REST-API als JSON-Payload an ein virtuelles Gateway. Im Hintergrund führt eine QA-Engine automatisierte Plausibilitäts- und Grenzwertprüfungen durch, etwa bei Schwellenwert-Überschreitungen, Sensorfehlern und ungültigen Payloads.</p>
+                </section>
+                <aside class="detail-tech" aria-labelledby="tech-title">
+                    <h2 id="tech-title">Technik und Architektur</h2>
+                    <p class="architecture-summary">Der Browser erstellt einen Telemetrie-Request im JSON-Format und übergibt ihn an eine lokale QA-Simulation. Diese prüft Temperaturgrenzen und Batteriestatus und visualisiert das Ergebnis als HTTP-Status und Prüfprotokoll.</p>
+                    <ul class="architecture-list">
+                        <li>Sensorwerte erfassen und als JSON serialisieren</li>
+                        <li>REST-API-Request an ein virtuelles Gateway simulieren</li>
+                        <li>Plausibilitäts- und Grenzwertvalidierung</li>
+                        <li>HTTP-Status und QA-Ergebnis visualisieren</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <footer class="detail-actions">
+                <a class="project-link" href="index.html">Zur Projektübersicht <span aria-hidden="true">→</span></a>
+            </footer>
+        </article>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="wordmark footer-mark" href="index.html">MA<span>.</span></a>
+            <p>Elektronik verstehen. Systeme verbinden. Qualität sichern.</p>
+            <p class="copyright">&copy; 2026 Mohamad Alshora</p>
+        </div>
+    </footer>
+</body>
+</html>
