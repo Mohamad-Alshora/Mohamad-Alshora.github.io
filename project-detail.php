@@ -427,9 +427,6 @@ G81 X220 Y20 Z-10 F300</textarea>
                 </div>
 
                 <footer class="detail-actions">
-                    <?php if ($project['github_url'] !== ''): ?>
-                        <a class="github-link" href="<?= escape($project['github_url']) ?>" target="_blank" rel="noopener noreferrer">Code auf GitHub ansehen <span aria-hidden="true">↗</span></a>
-                    <?php endif; ?>
                     <a class="project-link" href="index.php">Zur Projektübersicht <span aria-hidden="true">→</span></a>
                 </footer>
             </article>
